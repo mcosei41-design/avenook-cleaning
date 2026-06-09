@@ -1,0 +1,127 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-teal: var(--teal);
+  --color-teal-foreground: var(--teal-foreground);
+  --color-orange-accent: var(--orange-accent);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.99 0.005 220);
+  --foreground: oklch(0.18 0.04 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.04 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.04 250);
+  --primary: oklch(0.22 0.07 255);              /* deep navy from logo */
+  --primary-foreground: oklch(0.99 0.005 220);
+  --secondary: oklch(0.96 0.015 220);
+  --secondary-foreground: oklch(0.22 0.07 255);
+  --muted: oklch(0.96 0.012 220);
+  --muted-foreground: oklch(0.48 0.03 245);
+  --accent: oklch(0.72 0.14 180);               /* teal */
+  --accent-foreground: oklch(0.15 0.05 250);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.92 0.012 230);
+  --input: oklch(0.92 0.012 230);
+  --ring: oklch(0.72 0.14 180);
+  --teal: oklch(0.72 0.14 180);
+  --teal-foreground: oklch(0.15 0.05 250);
+  --orange-accent: oklch(0.68 0.17 45);
+  --navy: oklch(0.22 0.07 255);
+  --navy-foreground: oklch(0.99 0.005 220);
+
+  --gradient-brand: linear-gradient(135deg, oklch(0.65 0.16 200) 0%, oklch(0.72 0.16 165) 100%);
+  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.07 255) 0%, oklch(0.18 0.06 245) 60%, oklch(0.28 0.09 230) 100%);
+  --shadow-soft: 0 8px 30px -12px oklch(0.22 0.07 255 / 0.15);
+  --shadow-glow: 0 20px 60px -20px oklch(0.72 0.14 180 / 0.45);
+}
+
+.dark {
+  --background: oklch(0.15 0.04 250);
+  --foreground: oklch(0.98 0.005 220);
+  --card: oklch(0.2 0.05 250);
+  --card-foreground: oklch(0.98 0.005 220);
+  --popover: oklch(0.2 0.05 250);
+  --popover-foreground: oklch(0.98 0.005 220);
+  --primary: oklch(0.72 0.14 180);
+  --primary-foreground: oklch(0.15 0.05 250);
+  --secondary: oklch(0.25 0.05 250);
+  --secondary-foreground: oklch(0.98 0.005 220);
+  --muted: oklch(0.25 0.05 250);
+  --muted-foreground: oklch(0.7 0.03 230);
+  --accent: oklch(0.72 0.14 180);
+  --accent-foreground: oklch(0.15 0.05 250);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.72 0.14 180);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility gradient-brand {
+  background-image: var(--gradient-brand);
+}
+@utility gradient-hero {
+  background-image: var(--gradient-hero);
+}
+@utility text-gradient-brand {
+  background-image: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
