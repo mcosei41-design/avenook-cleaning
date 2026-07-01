@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "Avenook Cleaning Services",
-          email: "mcosei41@gmail.com",
+          email: "Info@avenook.co.uk",
           url: "/",
           areaServed: "United Kingdom",
           description: "Professional residential and commercial cleaning services across the UK.",
