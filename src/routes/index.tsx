@@ -257,7 +257,7 @@ function Home_() {
               <h3 className="mt-5 text-xl font-semibold">Talk to a human</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Prefer to chat? Email us at{" "}
-                <a className="font-medium text-teal-foreground underline" href="mailto:mcosei41@gmail.com">mcosei41@gmail.com</a>{" "}
+                <a className="font-medium text-teal-foreground underline" href="mailto:Info@avenook.co.uk">Info@avenook.co.uk</a>{" "}
                 or request a callback through the form — we reply quickly, 7 days a week.
               </p>
               <ul className="mt-6 space-y-2 text-sm">
