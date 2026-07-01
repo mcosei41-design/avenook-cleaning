@@ -29,7 +29,7 @@ function Contact() {
       <Section>
         <div className="grid gap-10 lg:grid-cols-5">
           <div className="space-y-4 lg:col-span-2">
-            <InfoCard icon={Mail} title="Email us" lines={[<a key="e" href="mailto:mcosei41@gmail.com" className="text-teal-foreground underline">mcosei41@gmail.com</a>, "Replies within a few hours, 7 days a week."]} />
+            <InfoCard icon={Mail} title="Email us" lines={[<a key="e" href="mailto:Info@avenook.co.uk" className="text-teal-foreground underline">Info@avenook.co.uk</a>, "Replies within a few hours, 7 days a week."]} />
             <InfoCard icon={Phone} title="Request a callback" lines={["Add your number to the form and we'll ring you straight back."]} />
             <InfoCard icon={Clock} title="Hours" lines={["Mon–Fri: 7am – 8pm","Sat–Sun: 8am – 6pm","Out-of-hours by arrangement"]} />
             <InfoCard icon={MapPin} title="Where we work" lines={["Serving homes & businesses across the UK — London, Manchester, Birmingham, Leeds, Bristol and beyond."]} />
