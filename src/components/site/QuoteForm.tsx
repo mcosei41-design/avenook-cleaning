@@ -32,7 +32,7 @@ export function QuoteForm({ compact = false }: { compact?: boolean }) {
       `Message:`,
       `${data.get("message") || "-"}`,
     ].join("\n");
-    window.location.href = `mailto:mcosei41@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:Info@avenook.co.uk?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`;
     toast.success("Opening your email — we'll reply within a few hours.");
